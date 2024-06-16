@@ -1,0 +1,11 @@
+version: '3.8'  # Adjust the version as per your Docker Compose compatibility
+
+services:
+  web:
+    build: .  # Use the current directory for building the Dockerfile
+    ports:
+      - "8080:8080"  # Map host port 8080 to container port 8080
+    environment:
+      - JAVA_OPTS=-Xmx512m  # Optional: Set Java options if needed
+    restart: always  # Restart policy: always restart the container if it stops
+
